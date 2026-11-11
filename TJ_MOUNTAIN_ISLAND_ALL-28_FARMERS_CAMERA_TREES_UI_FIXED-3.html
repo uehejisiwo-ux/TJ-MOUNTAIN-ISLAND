@@ -1,0 +1,1001 @@
+<!doctype html>
+<html lang="tg">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+<title>TJ MOUNTAIN ISLAND 164M — TAJIKISTAN EDITION ALL-28 FARMERS 164M WORLD · REAL ANIMAL AUDIO</title>
+<style>
+*{box-sizing:border-box}html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#75bce8;font-family:Arial,sans-serif;touch-action:none}
+canvas{display:block}#menu{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:linear-gradient(#5ab6e8aa,#182b20dd),repeating-linear-gradient(90deg,#ffffff08 0 2px,transparent 2px 42px);z-index:5}
+.panel{width:min(88vw,430px);padding:24px 20px;background:#253c2bea;border:4px solid #a6c987;box-shadow:0 8px 0 #142719;border-radius:14px;text-align:center;color:white}
+h1{font-size:clamp(30px,8vw,48px);margin:0 0 4px;color:#c7f28b;text-shadow:3px 4px #263c22;letter-spacing:1px}
+.sub{margin:0 0 20px;color:#e4f4d8;font-weight:bold;letter-spacing:3px}
+.menuBtn{display:block;width:100%;margin:10px 0;padding:14px 8px;border:3px solid #d6e9b7;border-radius:8px;background:linear-gradient(#83c74d,#4e8f34);box-shadow:0 4px #244b24;color:white;font-size:18px;font-weight:900;text-shadow:1px 2px #31522b}
+.menuBtn:active{transform:translateY(3px);box-shadow:0 1px #244b24}
+.small{font-size:12px;color:#d9e8d1;margin-top:15px;line-height:1.5}
+#gameui{display:none}#top{position:fixed;top:8px;left:8px;right:8px;display:flex;justify-content:space-between;pointer-events:none;gap:8px}
+.pill{background:#ffffffdf;border:2px solid #476b39;border-radius:10px;padding:7px 10px;font-weight:bold;color:#18371d;font-size:12px}
+#bottom{position:fixed;left:8px;right:8px;bottom:10px;display:flex;justify-content:space-between;align-items:end;gap:8px;pointer-events:none}
+.group{display:flex;gap:5px;pointer-events:auto;flex-wrap:wrap}
+#bottom .group:last-child{justify-content:flex-end;max-width:min(58vw,430px)}
+button.ctrl{width:47px;height:49px;flex:0 0 47px;border:2px solid #3e6134;border-radius:10px;background:#ffffffdf;color:#1d3b20;font-size:20px;font-weight:bold;touch-action:none}
+@media(max-width:700px){
+ #top{gap:4px;flex-wrap:wrap}
+ .pill{font-size:10px;padding:6px 7px}
+ #bottom{align-items:flex-end}
+ #bottom .group:last-child{max-width:54vw;gap:4px}
+ button.ctrl{width:43px;height:46px;flex-basis:43px;font-size:18px}
+ #inventory{bottom:112px;max-width:94vw;overflow-x:auto;justify-content:flex-start}
+ #notice{top:76px;max-width:88vw;overflow:hidden;text-overflow:ellipsis}
+}
+#look{position:fixed;inset:60px 0 90px 35%;pointer-events:auto}
+#cross{position:fixed;left:50%;top:50%;transform:translate(-50%,-50%);color:white;font-size:22px;text-shadow:0 1px 3px #000;pointer-events:none}
+#inventory{position:fixed;left:50%;bottom:68px;transform:translateX(-50%);display:flex;gap:4px}
+.slot{width:31px;height:31px;border:2px solid white;border-radius:4px;background:#ffffffb8;font-size:16px}.slot.sel{outline:3px solid #ffe35b}
+#notice{position:fixed;left:50%;top:48px;transform:translateX(-50%);background:#ffffffdf;padding:6px 9px;border-radius:8px;font-size:11px;color:#234;white-space:nowrap}
+#subpanel{display:none}
+</style></head><body>
+<div id="menu"><div class="panel" id="mainpanel">
+<h1>TJ MOUNTAIN ISLAND</h1><p class="sub">TAJIKISTAN EDITION · ALL-28 · 8K CLOUD DETAIL · SOLID MOUNTAIN FIX · 164M WORLD</p>
+<button class="menuBtn" id="play">🌱 CREATIVE</button>
+<button class="menuBtn" id="survival">❤️ SURVIVAL</button>
+<button class="menuBtn" id="multi">🌐 MULTIPLAYER</button>
+<button class="menuBtn" id="settings">⚙ SETTINGS</button>
+<div class="small">🏝️ ҶАЗИРА + ХАРИТАИ 164 МИЛЛИОН СУТУН<br>Chunk Loading · Помир · кӯлҳо ва дарёҳо · деҳаҳо · ҳайвонот · аспсаворӣ<br>ALL-28 8K CLOUD DETAIL · SOLID TERRAIN FIX · 164M SURFACE COLUMNS · 12,800 × 12,800 · ANDROID</div>
+</div>
+<div class="panel" id="subpanel"><h1 id="subTitle">SETTINGS</h1>
+<div id="settingsControls" style="display:none;text-align:left;color:white;font-size:17px">
+<label style="display:block;margin:12px 0">🎨 Graphics
+<select id="quality" style="width:100%;padding:10px;border-radius:10px"><option value="low">Low</option><option value="medium" selected>Medium</option><option value="high">High</option><option value="ultra">Ultra HD</option></select></label>
+<label style="display:block;margin:12px 0">🎮 Sensitivity <span id="sensVal">50</span>%
+<input id="sensitivity" type="range" min="10" max="100" value="50" style="width:100%"></label>
+<label style="display:block;margin:12px 0">🌍 View Distance
+<select id="distance" style="width:100%;padding:10px;border-radius:10px"><option value="35">Near</option><option value="60" selected>Normal</option><option value="90">Far</option></select></label>
+<label style="display:block;margin:12px 0">🌙 Day / Night
+<select id="daynight" style="width:100%;padding:10px;border-radius:10px"><option value="day" selected>Day</option><option value="night">Night</option></select></label>
+<p id="settingsNote" style="font-size:13px;opacity:.85">Танзимот ҳангоми бозӣ низ татбиқ мешаванд.</p>
+</div>
+<p id="subText">Танзимоти бозӣ</p><button class="menuBtn" id="back">↩ BACK</button></div></div>
+<div id="gameui"><div id="top"><div class="pill">🟩 TJ MINECRAFT</div><div class="pill" id="worldInfo">🌍 164M · CHUNKS</div><div class="pill" id="modeLabel">CREATIVE · TJ SNIPER X</div><div class="pill" id="fpsMeter">FPS: --</div>
+<div class="pill" id="survivalStats" style="display:none">❤️ 100 · 🍗 100</div></div><div id="cross">+</div><div id="look"></div><div id="notice">Ҷазираи кӯҳӣ дар уқёнус · экранро каш — нигоҳ кун · ⛏ гир · ➕ гузор</div>
+<div id="inventory"><button class="slot sel" data-block="grass">🟩</button><button class="slot" data-block="dirt">🟫</button><button class="slot" data-block="stone">⬜</button><button class="slot" data-block="wood">🟤</button><button class="slot" data-block="leaves">🌿</button><button class="slot" data-block="sword">🗡️</button><button class="slot" data-block="shield">🛡️</button><button class="slot" data-block="armor">💎</button><button class="slot" data-block="apple">🍎</button><button class="slot" data-block="bread">🍞</button><button class="slot" data-block="bow">🏹</button><button class="slot" data-block="pickaxe">⛏️</button></div>
+<div id="bottom"><div class="group"><button class="ctrl" id="left">◀</button><button class="ctrl" id="forward">▲</button><button class="ctrl" id="backward">▼</button><button class="ctrl" id="right">▶</button></div><div class="group"><button class="ctrl" id="mine">⛏️</button><button class="ctrl" id="place">➕</button><button class="ctrl" id="jump">⬆</button><button class="ctrl" id="mount">🐎</button><button class="ctrl" id="eat">🍎</button><button class="ctrl" id="save">💾</button><button class="ctrl" id="weather">🌦️</button><button class="ctrl" id="sound" aria-label="Садо">🔊</button><button class="ctrl" id="home">☰</button></div></div>
+<script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+<script>
+const menu=document.getElementById('menu'),main=document.getElementById('mainpanel'),sub=document.getElementById('subpanel');
+function showSub(title,msg){main.style.display='none';sub.style.display='block';document.getElementById('subTitle').textContent=title;document.getElementById('subText').textContent=msg;document.getElementById('settingsControls').style.display=title==='SETTINGS'?'block':'none';}
+const gameSettings={quality:'medium',sensitivity:50,distance:60,daynight:'day'};
+document.getElementById('settings').onclick=()=>showSub('SETTINGS','');
+const qualityEl=document.getElementById('quality'),sensEl=document.getElementById('sensitivity'),distEl=document.getElementById('distance'),dayEl=document.getElementById('daynight');
+function updateSettings(){
+ gameSettings.quality=qualityEl.value;gameSettings.sensitivity=Number(sensEl.value);gameSettings.distance=Number(distEl.value);gameSettings.daynight=dayEl.value;
+ document.getElementById('sensVal').textContent=gameSettings.sensitivity;
+ if(window.tjApplySettings)window.tjApplySettings(gameSettings);
+}
+[qualityEl,sensEl,distEl,dayEl].forEach(el=>el.addEventListener('input',updateSettings));
+[qualityEl,sensEl,distEl,dayEl].forEach(el=>el.addEventListener('change',updateSettings));
+document.getElementById('multi').onclick=()=>showSub('MULTIPLAYER','Multiplayer Online ҳоло пайваст нест. Барои бозӣ бо дӯстон сервер ва системаҳои шабакавӣ сохтан лозим аст.');
+document.getElementById('back').onclick=()=>{sub.style.display='none';main.style.display='block'};
+let gameMode='creative';
+document.getElementById('play').onclick=()=>{gameMode='creative';startGame()};
+document.getElementById('survival').onclick=()=>{gameMode='survival';startGame()};
+document.getElementById('home').onclick=()=>{if(typeof ambientTimer!=='undefined' && ambientTimer){clearInterval(ambientTimer);ambientTimer=null;}document.getElementById('gameui').style.display='none';menu.style.display='flex';main.style.display='block';sub.style.display='none'};
+let started=false;
+function startGame(){
+ menu.style.display='none';document.getElementById('gameui').style.display='block';
+ document.getElementById('modeLabel').textContent=(gameMode==='survival'?'SURVIVAL':'CREATIVE')+' · TJ SNIPER X';
+ document.getElementById('survivalStats').style.display=gameMode==='survival'?'block':'none';
+ if(started)return;
+ if(!window.THREE){alert('Three.js бор нашуд. Интернетро фаъол карда, саҳифаро аз нав кушо.');return}
+ started=true;
+ // Сабтҳои воқеии ҳайвонот аз Wikimedia Commons; садоҳо аз масофаи наздик шунида мешаванд.
+ let audioCtx=null,soundOn=true,ambientTimer=null,lastAnimalSoundAt=0;
+ const soundButton=document.getElementById('sound');
+ const animalSoundFiles={
+   cow:'https://upload.wikimedia.org/wikipedia/commons/4/48/Mudchute_cow_1.ogg',
+   sheep:'https://upload.wikimedia.org/wikipedia/commons/1/13/Sheep_bleating.ogg',
+   goat:'https://upload.wikimedia.org/wikipedia/commons/b/bc/Herd_of_goats_bleating.ogg',
+   horse:'https://upload.wikimedia.org/wikipedia/commons/d/db/Wiehern.ogg',
+   deer:'https://upload.wikimedia.org/wikipedia/commons/c/c8/Male_roe_deer_growl.ogg'
+ };
+ const animalAudio={};
+ for(const [kind,url] of Object.entries(animalSoundFiles)){const a=new Audio(url);a.preload='none';a.volume=.7;animalAudio[kind]=a;}
+ function audioReady(){
+   if(!audioCtx){const AC=window.AudioContext||window.webkitAudioContext;if(AC)audioCtx=new AC();}
+   if(audioCtx && audioCtx.state==='suspended')audioCtx.resume();
+ }
+ function playAnimalSound(kind,distance=0){
+   if(!soundOn||!animalAudio[kind])return;
+   const a=animalAudio[kind];
+   try{a.pause();a.currentTime=0;a.volume=Math.max(.12,Math.min(.82,1-distance/17));a.playbackRate=.96+Math.random()*.09;const p=a.play();if(p&&p.catch)p.catch(()=>{});}catch(e){}
+ }
+ function tone(freq,duration,wave='sine',volume=.045,slide=0){
+   if(!soundOn||!audioCtx)return;
+   const o=audioCtx.createOscillator(),g=audioCtx.createGain();o.type=wave;o.frequency.setValueAtTime(freq,audioCtx.currentTime);
+   if(slide)o.frequency.exponentialRampToValueAtTime(Math.max(35,freq+slide),audioCtx.currentTime+duration);
+   g.gain.setValueAtTime(.0001,audioCtx.currentTime);g.gain.exponentialRampToValueAtTime(volume,audioCtx.currentTime+.025);g.gain.exponentialRampToValueAtTime(.0001,audioCtx.currentTime+duration);
+   o.connect(g);g.connect(audioCtx.destination);o.start();o.stop(audioCtx.currentTime+duration+.03);
+ }
+ function sfx(kind){audioReady();if(!soundOn)return;
+   if(kind==='step'){tone(105,.07,'triangle',.018,-35);}
+   else if(kind==='block'){tone(180,.09,'square',.035,-90);tone(90,.12,'triangle',.025,-35);}
+   else if(kind==='jump'){tone(260,.16,'sine',.035,180);}
+   else if(kind==='eat'){tone(420,.08,'sine',.025,90);tone(620,.12,'sine',.025,-130);}
+   else if(kind==='horse'){playAnimalSound('horse',2);}
+   else if(kind==='rain'){tone(850,.09,'sine',.012,-300);tone(1150,.06,'sine',.009,-400);}
+ }
+ soundButton.onclick=()=>{soundOn=!soundOn;soundButton.textContent=soundOn?'🔊':'🔇';if(soundOn){audioReady();lastAnimalSoundAt=0;playAnimalSound('cow',0);}else{Object.values(animalAudio).forEach(a=>a.pause());if(ambientTimer){clearInterval(ambientTimer);ambientTimer=null;}}};
+ // Иқтибос ва иҷозатномаҳо: cow — CC BY-SA 3.0 (Secretlondon); sheep ва goat — public domain (earthcalling, stephan); horse — public domain (Hü.); deer — CC BY-SA 4.0 (1bumer). Сабтҳо аз Wikimedia Commons.
+ const scene=new THREE.Scene();scene.background=new THREE.Color(0x91d5ff);scene.fog=new THREE.Fog(0x91d5ff,42,105);
+ const camera=new THREE.PerspectiveCamera(75,innerWidth/innerHeight,.1,100);camera.position.set(0,2.2,5);
+ const renderer=new THREE.WebGLRenderer({antialias:!(/Android|iPhone|iPad/i.test(navigator.userAgent)),powerPreference:'high-performance'});renderer.shadowMap.enabled=true;renderer.shadowMap.type=THREE.PCFSoftShadowMap;renderer.shadowMap.autoUpdate=true;renderer.setPixelRatio(Math.min(devicePixelRatio,1.25));renderer.setSize(innerWidth,innerHeight);renderer.outputColorSpace=THREE.SRGBColorSpace;renderer.toneMapping=THREE.ACESFilmicToneMapping;renderer.toneMappingExposure=1.12;document.body.insertBefore(renderer.domElement,document.getElementById('menu'));
+ scene.add(new THREE.HemisphereLight(0xe8f6ff,0x40502d,1.45));
+ const sun=new THREE.DirectionalLight(0xfff0d4,2.7);sun.position.set(-14,28,16);sun.castShadow=true;sun.shadow.mapSize.set(2048,2048);sun.shadow.camera.left=-34;sun.shadow.camera.right=34;sun.shadow.camera.top=34;sun.shadow.camera.bottom=-34;sun.shadow.camera.near=1;sun.shadow.camera.far=85;sun.shadow.bias=-0.00012;sun.shadow.normalBias=0.025;sun.shadow.radius=3;sun.shadow.camera.updateProjectionMatrix();scene.add(sun);
+ const fillLight=new THREE.DirectionalLight(0xc8e6ff,.32);fillLight.position.set(12,8,-10);scene.add(fillLight);
+ let targetPixelRatio=1.25,adaptivePixelRatio=1.25;
+ window.tjApplySettings=(cfg)=>{
+   const ratios={low:0.8,medium:1.15,high:1.4,ultra:1.6}; // Андроид: маҳдудияти пиксел барои FPS-и устувортар
+   targetPixelRatio=Math.min(devicePixelRatio,ratios[cfg.quality]||1.15);adaptivePixelRatio=Math.min(adaptivePixelRatio,targetPixelRatio);renderer.setPixelRatio(adaptivePixelRatio);renderer.setSize(innerWidth,innerHeight);sun.castShadow=cfg.quality!=='low';sun.shadow.mapSize.set(cfg.quality==='ultra'?1536:cfg.quality==='high'?1024:768,cfg.quality==='ultra'?1536:cfg.quality==='high'?1024:768);sun.shadow.needsUpdate=true;
+   scene.fog.far=Math.max(cfg.distance,42);
+   if(cfg.daynight==='night'){scene.background.set(0x101b3a);scene.fog.color.set(0x101b3a);sun.intensity=.35;fillLight.intensity=.2;sunBall.visible=false;}
+   else{scene.background.set(0x91d5ff);scene.fog.color.set(0x91d5ff);sun.intensity=2.7;fillLight.intensity=.32;sunBall.visible=true;}
+ };
+ // Офтоби дурахшон ва абрҳои блокӣ
+ const sunBall=new THREE.Mesh(new THREE.SphereGeometry(2.2,12,10),new THREE.MeshBasicMaterial({color:0xfff2b0}));
+ sunBall.position.set(-24,27,-48);scene.add(sunBall);
+ window.tjApplySettings(gameSettings);
+ const clouds=[];
+ function makeCloud(x,y,z,scale=1,variant=0){
+   const g=new THREE.Group();
+   const topMat=new THREE.MeshLambertMaterial({color:0xffffff});
+   const sideMat=new THREE.MeshLambertMaterial({color:0xe6eef5});
+   // Абрҳои ҳаҷмдори сердетал: геометрияи баландсифат барои намуди 8K-style бе сохтани текстураи азими 8K дар хотираи телефон.
+   const puffs=variant%3===0
+     ? [[0,0,0,2.5,1.05,1.55],[2.0,.25,.05,1.85,1.25,1.35],[-1.95,.18,-.08,1.95,1.15,1.4],[.25,.82,0,1.65,1.0,1.25],[-.75,-.2,.12,2.0,.72,1.55],[3.15,-.08,.08,1.15,.72,1.0],[-3.05,-.1,0,1.2,.72,1.0]]
+     : variant%3===1
+     ? [[0,0,0,2.65,.95,1.55],[2.25,.2,0,1.75,1.15,1.3],[-2.2,.25,0,1.85,1.1,1.35],[.05,.78,0,1.55,.95,1.2],[1.0,-.22,.15,2.0,.7,1.5],[-3.15,-.12,0,1.1,.7,.95],[3.2,-.1,0,1.05,.68,.95]]
+     : [[0,0,0,2.3,1.0,1.45],[1.8,.38,0,1.7,1.2,1.25],[-1.85,.2,0,1.75,1.1,1.3],[0,.86,0,1.5,.9,1.15],[2.8,-.1,0,1.0,.65,.9],[-2.9,-.08,0,1.0,.65,.9]];
+   puffs.forEach(([a,b,c,rx,ry,rz],i)=>{
+     const geo=new THREE.SphereGeometry(1,64,48);
+     const q=new THREE.Mesh(geo,i%3===0?sideMat:topMat);
+     q.position.set(a*scale,b*scale,c*scale);
+     q.scale.set(rx*scale,ry*scale,rz*scale);
+     q.castShadow=false;q.receiveShadow=false;g.add(q);
+   });
+   g.position.set(x,y,z);g.userData.cloudScale=scale;g.userData.cloudVariant=variant;scene.add(g);clouds.push(g);
+ }
+ // Қабати зичи абрҳо дар тамоми осмон, на танҳо чор абри ҷудогона.
+ [
+   [-34,18,-34,1.35],[-17,21,-38,1.55],[2,19,-36,1.25],[22,22,-34,1.55],[39,18,-28,1.2],
+   [-40,17,-8,1.15],[-22,20,-7,1.35],[-3,22,-10,1.5],[17,18,-8,1.25],[37,21,-5,1.4],
+   [-36,19,18,1.35],[-15,22,21,1.5],[7,19,20,1.25],[29,22,18,1.55],
+   [-25,18,39,1.25],[0,21,40,1.5],[25,19,38,1.3]
+ ].forEach((v,i)=>makeCloud(v[0],v[1],v[2],v[3],i));
+ // Текстураҳои замин мутобиқанд: то 4K дар дастгоҳҳои пуриқтидор ва 2K дар Android. Абрҳо геометрияи сердетали 8K-style доранд, на файли текстураи 8K.
+ const textureSize=(Number(navigator.deviceMemory||4)>=8 && Math.max(screen.width,screen.height)>=1440)?4096:2048;
+ function tex(color,seed,kind){
+   const size=textureSize,cv=document.createElement('canvas');cv.width=cv.height=size;
+   const g=cv.getContext('2d',{alpha:false});g.fillStyle=color;g.fillRect(0,0,size,size);
+   let n=(seed*2654435761)>>>0;
+   const rnd=()=>{n=(n*1664525+1013904223)>>>0;return n/4294967296};
+   const img=g.getImageData(0,0,size,size),d=img.data;
+   // Микроноиз ва донаҳои табиӣ барои сатҳи санг, хок, алаф ва барф.
+   for(let i=0;i<d.length;i+=4){const v=(rnd()-.5)*(kind==='stone'?34:kind==='snow'?15:26);d[i]=Math.max(0,Math.min(255,d[i]+v));d[i+1]=Math.max(0,Math.min(255,d[i+1]+v));d[i+2]=Math.max(0,Math.min(255,d[i+2]+v));}
+   g.putImageData(img,0,0);
+   if(kind==='wood'){
+     for(let i=0;i<260;i++){const x=rnd()*size,y=rnd()*size,w=1+rnd()*5;g.fillStyle=rnd()>.5?'rgba(45,24,10,.25)':'rgba(255,210,130,.22)';g.fillRect(x,y,w,35+rnd()*180);}
+     for(let i=0;i<90;i++){g.strokeStyle='rgba(35,20,10,.25)';g.beginPath();const x=rnd()*size,y=rnd()*size;g.ellipse(x,y,4+rnd()*22,2+rnd()*8,0,0,Math.PI*2);g.stroke();}
+   } else if(kind==='grass'||kind==='leaves'){
+     for(let i=0;i<9500;i++){const x=rnd()*size,y=rnd()*size;g.fillStyle=rnd()>.5?'rgba(220,255,160,.22)':'rgba(10,45,8,.2)';g.fillRect(x,y,1+rnd()*3,2+rnd()*8);}
+   } else if(kind==='stone'){
+     for(let i=0;i<2200;i++){const x=rnd()*size,y=rnd()*size;g.fillStyle=rnd()>.5?'rgba(255,255,255,.22)':'rgba(0,0,0,.2)';g.fillRect(x,y,2+rnd()*18,2+rnd()*10);}
+   } else if(kind==='dirt'){
+     for(let i=0;i<6000;i++){const x=rnd()*size,y=rnd()*size;g.fillStyle=rnd()>.5?'rgba(210,155,95,.25)':'rgba(40,20,8,.2)';g.fillRect(x,y,1+rnd()*4,1+rnd()*4);}
+   } else if(kind==='snow'){
+     for(let i=0;i<1800;i++){const x=rnd()*size,y=rnd()*size;g.fillStyle='rgba(150,190,220,.22)';g.fillRect(x,y,1+rnd()*3,1+rnd()*3);}
+   }
+   // Қабатҳои иловагии микродетал: алафи майда, сангреза, рагҳои санг ва кристаллҳои барф.
+   if(kind==='grass'){
+     // Алафи табиӣ: доғҳои сабзи гуногун, хӯшаҳои майда ва пояҳои алоҳида.
+     for(let i=0;i<1500;i++){
+       const x=rnd()*size,y=rnd()*size,r=5+rnd()*34;
+       g.fillStyle=rnd()>.5?'rgba(35,105,25,.10)':'rgba(205,225,92,.13)';
+       g.beginPath();g.ellipse(x,y,r,r*(.35+rnd()*.55),rnd()*Math.PI,0,Math.PI*2);g.fill();
+     }
+     for(let i=0;i<11500;i++){
+       const x=rnd()*size,y=rnd()*size,h=4+rnd()*19;
+       const light=rnd();
+       g.strokeStyle=light>.72?'rgba(225,246,145,.62)':light>.36?'rgba(55,125,34,.58)':'rgba(17,78,20,.48)';
+       g.lineWidth=.7+rnd()*1.8;g.beginPath();g.moveTo(x,y);
+       g.quadraticCurveTo(x+(rnd()-.5)*5,y-h*.55,x+(rnd()-.5)*12,y-h);g.stroke();
+     }
+     // Хӯшаҳои сечӯба, ки сатҳро аз якрангӣ мебароранд.
+     for(let i=0;i<2100;i++){
+       const x=rnd()*size,y=rnd()*size,h=3+rnd()*8;
+       g.strokeStyle=rnd()>.5?'rgba(185,218,91,.58)':'rgba(28,91,24,.52)';g.lineWidth=1+rnd()*1.2;
+       for(let j=-1;j<=1;j++){g.beginPath();g.moveTo(x,y);g.lineTo(x+j*h*.55,y-h*(.65+rnd()*.5));g.stroke();}
+     }
+     for(let i=0;i<520;i++){const x=rnd()*size,y=rnd()*size;g.fillStyle=rnd()>.5?'rgba(230,215,120,.30)':'rgba(245,245,175,.22)';g.beginPath();g.arc(x,y,.8+rnd()*1.8,0,Math.PI*2);g.fill();}
+   } else if(kind==='leaves'){
+     for(let i=0;i<1900;i++){const x=rnd()*size,y=rnd()*size,r=2+rnd()*13;g.fillStyle=rnd()>.5?'rgba(120,190,65,.42)':'rgba(8,65,20,.38)';g.beginPath();g.ellipse(x,y,r,r*.48,rnd()*3,0,Math.PI*2);g.fill();}
+   } else if(kind==='dirt'){
+     for(let i=0;i<2600;i++){const x=rnd()*size,y=rnd()*size,r=1+rnd()*4;g.fillStyle=rnd()>.5?'rgba(235,185,120,.42)':'rgba(45,24,12,.38)';g.beginPath();g.ellipse(x,y,r,r*.65,0,0,Math.PI*2);g.fill();}
+   } else if(kind==='stone'){
+     for(let i=0;i<420;i++){const x=rnd()*size,y=rnd()*size;g.strokeStyle=rnd()>.5?'rgba(245,250,250,.38)':'rgba(35,42,45,.34)';g.lineWidth=1+rnd()*3;g.beginPath();g.moveTo(x,y);g.lineTo(x+(rnd()-.5)*55,y+(rnd()-.5)*35);g.stroke();}
+   } else if(kind==='snow'){
+     for(let i=0;i<900;i++){const x=rnd()*size,y=rnd()*size;g.fillStyle='rgba(255,255,255,.65)';g.beginPath();g.arc(x,y,1+rnd()*2.5,0,Math.PI*2);g.fill();}
+   }
+   const t=new THREE.CanvasTexture(cv);t.colorSpace=THREE.SRGBColorSpace;
+   t.wrapS=t.wrapT=THREE.RepeatWrapping;t.magFilter=THREE.LinearFilter;t.minFilter=THREE.LinearMipmapLinearFilter;
+   t.generateMipmaps=true;t.anisotropy=Math.min(16,renderer.capabilities.getMaxAnisotropy());
+   return new THREE.MeshStandardMaterial({map:t,roughness:kind==='diamond'?.24:kind==='snow'?.88:.94,metalness:kind==='diamond'?.35:0});
+ }
+ const mats={grass:tex('#62ad3d',1,'grass'),dirt:tex('#87552f',2,'dirt'),stone:tex('#858b8c',3,'stone'),wood:tex('#986333',4,'wood'),leaves:tex('#397f32',5,'leaves'),diamond:tex('#36d9d2',6,'diamond'),snow:tex('#f2f8ff',7,'snow'),water:new THREE.MeshPhysicalMaterial({color:0x39bde8,transparent:true,opacity:.78,roughness:.18,metalness:.08,clearcoat:.8,clearcoatRoughness:.12})};
+ const geo=new THREE.BoxGeometry(1,1,1),blocks=new Map(),world=new THREE.Group();scene.add(world);const key=(x,y,z)=>`${x},${y},${z}`;
+ function add(x,y,z,type){let k=key(x,y,z);if(blocks.has(k))return;let m=new THREE.Mesh(geo,mats[type]||mats.grass);m.castShadow=type!=='water';m.receiveShadow=type!=='water';m.position.set(x,y,z);m.userData={x,y,z,type};world.add(m);blocks.set(k,m)}
+ // Ҷазираи даврашакли кӯҳӣ дар миёни уқёнус
+ // Қабати замин танҳо дар дохили соҳил сохта мешавад.
+ for(let x=-30;x<=30;x++)for(let z=-30;z<=30;z++){
+   if(Math.hypot(x,z)<=28){add(x,-1,z,'dirt');add(x,-2,z,'stone');add(x,0,z,'grass');}
+ }
+ // Алафи сеченака ва гулҳои саҳроӣ дар рӯи ҷазира: инстансҳо барои кори сабук дар Android.
+ const bladeShape=new THREE.BufferGeometry();
+ bladeShape.setAttribute('position',new THREE.Float32BufferAttribute([
+   0,0,0,  .075,.20,0,  .025,.43,0,
+   0,0,0,  .025,.43,0, -.065,.19,0
+ ],3));
+ bladeShape.computeVertexNormals();
+ const bladeMat=new THREE.MeshStandardMaterial({color:0x69ad36,side:THREE.DoubleSide,roughness:.9});
+ const bladeMat2=new THREE.MeshStandardMaterial({color:0x91c94b,side:THREE.DoubleSide,roughness:.9});
+ const grassBlades=new THREE.InstancedMesh(bladeShape,bladeMat,900);
+ const grassBlades2=new THREE.InstancedMesh(bladeShape,bladeMat2,600);
+ // Алафи 3D низ соя меандозад ва соя қабул мекунад.
+ grassBlades.castShadow=true;grassBlades.receiveShadow=true;
+ grassBlades2.castShadow=true;grassBlades2.receiveShadow=true;
+ const grassDummy=new THREE.Object3D();let bladeCount=0,bladeCount2=0;const grassMotion=[];
+ let grassSeed=92741;const grassRand=()=>{grassSeed=(grassSeed*1664525+1013904223)>>>0;return grassSeed/4294967296;};
+ for(let x=-27;x<=27;x++)for(let z=-27;z<=27;z++){
+   if(Math.hypot(x,z)>26 || grassRand()>.24)continue;
+   const tuftX=x+(grassRand()-.5)*.72,tuftZ=z+(grassRand()-.5)*.72;
+   for(let b=0;b<3;b++){
+     grassDummy.position.set(tuftX,.52,tuftZ);
+     grassDummy.rotation.set(0,grassRand()*Math.PI*2,(grassRand()-.5)*.18);
+     const scale=.65+grassRand()*.65;grassDummy.scale.set(scale,scale,scale);grassDummy.updateMatrix();
+     if(grassRand()>.48 && bladeCount<900){grassBlades.setMatrixAt(bladeCount,grassDummy.matrix);grassMotion.push({mesh:grassBlades,index:bladeCount,x:tuftX,z:tuftZ,base:grassDummy.rotation.z,scale,phase:grassRand()*Math.PI*2});bladeCount++;}
+     else if(bladeCount2<600){grassBlades2.setMatrixAt(bladeCount2,grassDummy.matrix);grassMotion.push({mesh:grassBlades2,index:bladeCount2,x:tuftX,z:tuftZ,base:grassDummy.rotation.z,scale,phase:grassRand()*Math.PI*2});bladeCount2++;}
+   }
+ }
+ grassBlades.count=bladeCount;grassBlades2.count=bladeCount2;
+ grassBlades.instanceMatrix.needsUpdate=true;grassBlades2.instanceMatrix.needsUpdate=true;
+ grassBlades.frustumCulled=false;grassBlades2.frustumCulled=false;
+ scene.add(grassBlades,grassBlades2);
+ const flowerGroup=new THREE.Group();
+ const flowerStem=new THREE.Mesh(new THREE.CylinderGeometry(.012,.018,.20,5),new THREE.MeshStandardMaterial({color:0x397b2b}));
+ const flowerHeadGeo=new THREE.SphereGeometry(.055,6,5);
+ const flowerMats=[0xffe45c,0xffffff,0xf28ab5].map(c=>new THREE.MeshStandardMaterial({color:c,roughness:.8}));
+ for(let i=0;i<34;i++){
+   const x=(grassRand()-.5)*43,z=(grassRand()-.5)*43;if(Math.hypot(x,z)>23)continue;
+   const stem=flowerStem.clone();stem.position.set(x,.62,z);flowerGroup.add(stem);
+   const head=new THREE.Mesh(flowerHeadGeo,flowerMats[i%flowerMats.length]);head.position.set(x,.75,z);flowerGroup.add(head);
+ }
+ scene.add(flowerGroup);
+ // Уқёнуси кабуд атрофи тамоми ҷазира
+ const oceanGeo=new THREE.PlaneGeometry(110,110,48,48);const ocean=new THREE.Mesh(oceanGeo,new THREE.MeshPhysicalMaterial({color:0x159bd0,transparent:true,opacity:.9,roughness:.22,metalness:.08,clearcoat:1,clearcoatRoughness:.08}));ocean.receiveShadow=true;
+ ocean.rotation.x=-Math.PI/2;ocean.position.y=-.12;scene.add(ocean);
+ // Соҳили регӣ ҳамчун ҳалқаи равшан дар канори ҷазира
+ const sandMat=new THREE.MeshLambertMaterial({color:0xd9c184});
+ for(let x=-29;x<=29;x++)for(let z=-29;z<=29;z++){
+   const r=Math.hypot(x,z);
+   if(r>26.5&&r<=28.5){const shore=new THREE.Mesh(geo,sandMat);shore.position.set(x,.015,z);scene.add(shore);}
+ }
+ for(const [ox,oz] of [[-10,-4],[-8,6],[10,9],[12,-5],[-12,11]]) add(ox,-1,oz,'diamond');
+ const treeLocations=[];
+ function tree(x,z){const groundY=Math.max(0,terrainHeight(Math.round(x),Math.round(z)));treeLocations.push([x,z,treeLocations.length%4,groundY]);for(let y=1;y<4;y++)add(x,groundY+y,z,'wood');}
+ tree(-6,-5);tree(7,-8);tree(9,5);tree(-10,8);
+ // Дарахтони ҷазираи оғоз ба баландии воқеии замин мутобиқ карда мешаванд.
+ // Ҷангалҳои нав дар канори ҷаҳон, бо фосила аз деҳа ва ҷойи оғоз
+ let forestSeed=91827;
+ function rand(){forestSeed=(forestSeed*1664525+1013904223)>>>0;return forestSeed/4294967296;}
+ for(let i=0;i<78;i++){
+   const x=Math.floor(rand()*55)-27,z=Math.floor(rand()*55)-27;
+   if(Math.hypot(x,z)<11)continue;
+   if(Math.hypot(x+7,z+9)<7)continue;
+   tree(x,z);
+ }
+ // Баргҳои иловагии ҳаҷмдор: қабатҳои майдаи барг болои тоҷи блокӣ, бо рангҳои табиӣ.
+ const foliageGroup=new THREE.Group();scene.add(foliageGroup);
+ const leafGeo=new THREE.IcosahedronGeometry(.46,1);
+ // Тоҷҳои арча ва санавбар: конусҳои бисёрқабатаи 3D, сабук барои Android.
+ const pineGeo=new THREE.ConeGeometry(.88,1.75,7);
+ const pineMat=new THREE.MeshStandardMaterial({color:0x286b36,roughness:.94,flatShading:true});
+ const pineCanopy=new THREE.InstancedMesh(pineGeo,pineMat,treeLocations.length*3);
+ pineCanopy.castShadow=true;pineCanopy.receiveShadow=true;foliageGroup.add(pineCanopy);
+ const pineDummy=new THREE.Object3D();let pineId=0;
+ const leafMats=[0x2f7d2b,0x438f32,0x5aa63b,0x276b29].map(color=>new THREE.MeshStandardMaterial({color,roughness:.88,flatShading:true}));
+ const leafCounts=[treeLocations.length*18,treeLocations.length*14,treeLocations.length*10,treeLocations.length*8];
+ const leafMeshes=leafMats.map((mat,i)=>{const mesh=new THREE.InstancedMesh(leafGeo,mat,leafCounts[i]);mesh.castShadow=true;mesh.receiveShadow=true;foliageGroup.add(mesh);return mesh;});
+ const leafDummy=new THREE.Object3D();let leafIds=[0,0,0,0];
+ treeLocations.forEach(([tx,tz,species,groundY=0],ti)=>{
+   // Чор навъи дарахт: арчаи борик, санавбар, дарахти паҳнбарг ва дарахти тирамоҳӣ.
+   const conifer=species<2;
+   if(conifer){
+     for(let k=0;k<3;k++){
+       pineDummy.position.set(tx,groundY+3.35+k*.56,tz);
+       const sc=(species===0?1.0:.88)*(1-k*.19);
+       pineDummy.scale.set(sc,1.0-k*.12,sc);pineDummy.rotation.y=(ti%7)*.13;
+       pineDummy.updateMatrix();pineCanopy.setMatrixAt(pineId++,pineDummy.matrix);
+     }
+   }
+   for(let j=0;j<50;j++){
+     const layer=j<18?0:j<32?1:j<42?2:3;
+     const angle=(j*2.399+ti*.71);
+     const broadRad=[.25,.55,.78,.98][layer];
+     const pineRad=[.16,.32,.52,.70][layer];
+     const rad=conifer?pineRad:broadRad;
+     const baseY=groundY+(conifer?[4.55,4.12,3.72,3.38][layer]:[3.78,3.58,3.38,3.48][layer]);
+     const y=baseY+(j%4)*.11;
+     const x=tx+Math.cos(angle)*rad,z=tz+Math.sin(angle)*rad;
+     const mesh=leafMeshes[layer],id=leafIds[layer]++;
+     leafDummy.position.set(x,y,z);
+     const scale=(conifer?[.40,.47,.46,.40][layer]:[.62,.68,.58,.48][layer])*(species===3?.94:1);
+     leafDummy.scale.set(scale*(.8+(j%3)*.12),scale*(conifer?.82:.62),scale*(.75+(j%4)*.08));
+     leafDummy.rotation.set((j%5)*.12,angle,(j%7)*.08);leafDummy.updateMatrix();mesh.setMatrixAt(id,leafDummy.matrix);
+   }
+ });
+ pineCanopy.count=pineId;pineCanopy.instanceMatrix.needsUpdate=true;
+ leafMeshes.forEach(mesh=>{mesh.count=leafIds[leafMeshes.indexOf(mesh)];mesh.instanceMatrix.needsUpdate=true;});
+ // Шохаҳои кӯтоҳ аз тана ба дохили тоҷи баргҳо пайваст мешаванд.
+ const branchMat=new THREE.MeshStandardMaterial({color:0x76502c,roughness:1});
+ const branchGeo=new THREE.CylinderGeometry(.04,.07,.78,5);
+ const branchDummy=new THREE.Object3D();
+ treeLocations.forEach(([tx,tz,species=0,groundY=0],ti)=>{
+   for(let k=0;k<5;k++){
+     const a=k*Math.PI*2/5+ti*.37;
+     const b=new THREE.Mesh(branchGeo,branchMat);
+     b.position.set(tx+Math.cos(a)*.28,groundY+3.05+k%2*.08,tz+Math.sin(a)*.28);
+     b.rotation.z=Math.cos(a)*.72;
+     b.rotation.x=Math.sin(a)*.72;
+     b.rotation.y=-a;
+     b.castShadow=true;foliageGroup.add(b);
+   }
+ });
+ // Баргҳои резанда: зарраҳои хурд аз канори тоҷ ба замин мефароянд.
+ const fallingLeafGeo=new THREE.OctahedronGeometry(.105,0);
+ const fallingLeafMats=[0x4d9635,0x78ad3d,0x9bbd4b].map(color=>new THREE.MeshStandardMaterial({color,roughness:.9}));
+ const fallingLeaves=[];
+ for(let i=0;i<46;i++){
+   const mat=fallingLeafMats[i%fallingLeafMats.length];
+   const leaf=new THREE.Mesh(fallingLeafGeo,mat);
+   const t=treeLocations[i%treeLocations.length];
+   leaf.position.set(t[0]+(Math.random()-.5)*3,(t[3]||0)+2.8+Math.random()*2,t[1]+(Math.random()-.5)*3);
+   leaf.rotation.set(Math.random()*3,Math.random()*3,Math.random()*3);
+   leaf.userData={homeX:t[0],homeZ:t[1],phase:Math.random()*6,fall:Math.random()*.9};
+   foliageGroup.add(leaf);fallingLeaves.push(leaf);
+ }
+
+ // Кӯҳҳои сангӣ дар чанд гӯшаи харита
+ function mountain(cx,cz,r,h){
+   for(let y=0;y<h;y++){
+     const radius=Math.max(1,Math.floor(r*(1-y/h)));
+     for(let dx=-radius;dx<=radius;dx++)for(let dz=-radius;dz<=radius;dz++){
+       if(dx*dx+dz*dz<=radius*radius && Math.hypot(cx+dx,cz+dz)>5)
+         add(cx+dx,y+1,cz+dz,y>=h-2?'snow':(y>h-4?'stone':'dirt'));
+     }
+   }
+ }
+ mountain(-23,-21,7,9);mountain(23,-22,6,8);mountain(-24,23,7,10);mountain(24,22,6,8);
+ // Ғори сангӣ дар кӯҳи шимолу ғарбӣ
+ for(let z=-29;z<=-22;z++)for(let x=-25;x<=-21;x++)for(let y=0;y<=3;y++){
+   const k=key(x,y,z),old=blocks.get(k);
+   if(old){world.remove(old);blocks.delete(k);}
+ }
+ // Чуқурии торики ғор дар зери кӯҳ
+ for(let z=-23;z<=-18;z++)for(let x=-24;x<=-22;x++)for(let y=-2;y<=-1;y++){
+   const k=key(x,y,z),old=blocks.get(k);
+   if(old){world.remove(old);blocks.delete(k);}
+ }
+ // Санги равшан дар канори даромадгоҳ
+ add(-26,1,-28,'stone');add(-20,1,-28,'stone');add(-26,2,-28,'stone');add(-20,2,-28,'stone');
+ // Небольшие каменные холмы
+ mountain(0,-25,4,4);mountain(25,2,4,5);
+ // Қуллаҳои барфпӯш ва кӯҳҳои иловагӣ
+ mountain(-5,27,5,7);mountain(8,26,4,6);mountain(27,-8,5,7);
+  // Қаторкӯҳҳои Тоҷикистон: манзараи илҳомгирифта аз Помир ва кӯҳҳои Фон
+  mountain(-27,0,5,8); mountain(-22,5,4,7); mountain(-27,10,5,9);
+  mountain(27,12,5,9); mountain(22,17,4,7); mountain(27,23,5,10);
+  // Қуллаҳои баланди барфпӯши Помир
+  mountain(-27,-12,5,11); mountain(26,-14,5,10); mountain(19,-25,4,8);
+  // Қаторкӯҳи Фон бо қуллаҳои пайдарпай
+  mountain(-14,26,4,8); mountain(-20,25,4,7); mountain(13,26,4,8);
+  // Қуллаҳои наздик ва намоён аз нуқтаи оғоз
+  mountain(-15,-8,6,14); mountain(-16,5,6,13);
+  mountain(15,-9,6,15); mountain(16,6,6,14);
+  mountain(-8,-17,6,13); mountain(8,-17,6,15);
+  mountain(-8,17,6,14); mountain(8,17,6,14);
+  // Қаторкӯҳҳои баландтар барои манзараи васеи Помир ва Фон
+  mountain(-29,-5,8,15); mountain(-28,7,7,13); mountain(-25,17,7,14);
+  mountain(29,-4,8,16); mountain(28,9,7,14); mountain(25,19,8,15);
+  mountain(-12,-29,7,13); mountain(3,-29,8,16); mountain(16,-28,7,14);
+  mountain(-9,29,7,14); mountain(7,29,8,16); mountain(19,28,7,13);
+ // Қаторкӯҳи калон дар паси деҳа — аз нуқтаи оғози бозӣ равшан намоён
+ mountain(-18,-13,8,15);
+ mountain(-7,-16,7,12);
+ mountain(5,-17,8,16);
+ mountain(17,-14,8,14);
+ // Қуллаҳои наздик дар ду тарафи майдони оғоз
+ mountain(-17,2,7,12);
+ mountain(17,1,7,13);
+ // Шаршараи блокӣ аз нишебии кӯҳи шарқӣ
+ for(let y=1;y<=6;y++)add(23,y,-22,'water');
+ // Обанбори хурд дар поёни шаршара
+ for(let x=21;x<=25;x++)for(let z=-24;z<=-20;z++)add(x,0,z,'water');
+ // Ҷӯйбори об аз доманаи кӯҳ
+ for(let z=-20;z<=-16;z++)add(23,0,z,'water');
+ // Қабати барф дар доманаи қуллаҳои баланд
+ for(const [cx,cz] of [[-23,-21],[23,-22],[-24,23],[24,22],[-5,27],[8,26],[27,-8]]){
+   for(let dx=-1;dx<=1;dx++)for(let dz=-1;dz<=1;dz++){
+     const x=cx+dx,z=cz+dz,k=key(x,0,z),old=blocks.get(k);
+     if(old){world.remove(old);blocks.delete(k);}
+     add(x,0,z,'snow');
+   }
+ }
+
+ // Сокинони одии деҳа ва ҳайвонот (моделҳои блокӣ)
+ const creatures = [];
+ function cube(parent, color, x,y,z, sx,sy,sz) {
+   const mesh = new THREE.Mesh(new THREE.BoxGeometry(sx,sy,sz),
+     new THREE.MeshLambertMaterial({color}));
+   mesh.position.set(x,y,z); parent.add(mesh); return mesh;
+ }
+ function villager(x,z) {
+   const g = new THREE.Group(); g.position.set(x,.395,z); scene.add(g);
+   cube(g,0x9b6844,0,1.05,0,.62,.85,.42);
+   cube(g,0xc99b72,0,1.72,0,.52,.52,.48);
+   cube(g,0x33251e,0,1.78,.245,.30,.07,.025);
+   cube(g,0x6f4534,0,1.58,.25,.22,.10,.04);
+   cube(g,0x76513a,-.39,1.08,0,.18,.72,.2);
+   cube(g,0x76513a,.39,1.08,0,.18,.72,.2);
+   const legs=[cube(g,0x4b382c,-.17,.38,0,.20,.55,.22),
+               cube(g,0x4b382c,.17,.38,0,.20,.55,.22)];
+   creatures.push({group:g,type:'villager',legs,phase:Math.random()*6,
+     heading:Math.random()*Math.PI*2,nextTurn:0,speed:.009});
+ }
+ function farmer(x,z) {
+   const g = new THREE.Group(); g.position.set(x,.395,z); scene.add(g);
+   // Либоси деҳқон, рӯй, кулоҳи пахолӣ ва каланд
+   cube(g,0x4f7650,0,1.05,0,.64,.86,.44);
+   cube(g,0xc9956b,0,1.72,0,.52,.52,.48);
+   cube(g,0x33251e,0,1.78,.245,.30,.07,.025);
+   cube(g,0x6f4534,0,1.58,.25,.22,.10,.04);
+   cube(g,0x76513a,-.40,1.08,0,.18,.72,.2);
+   cube(g,0x76513a,.40,1.08,0,.18,.72,.2);
+   cube(g,0xb88b42,0,2.02,0,.78,.12,.72);
+   cube(g,0xc9a052,0,2.10,0,.52,.10,.48);
+   // Дасти чап ва каланд
+   cube(g,0x76513a,.48,1.18,0,.16,.30,.17);
+   const hoe=cube(g,0x76513a,.62,.91,.02,.08,.62,.08);
+   hoe.rotation.z=-.25;
+   const blade=cube(g,0x8b9296,.76,.66,.02,.36,.10,.10);
+   blade.rotation.z=-.25;
+   const legs=[cube(g,0x55402e,-.17,.38,0,.20,.55,.22),cube(g,0x55402e,.17,.38,0,.20,.55,.22)];
+   creatures.push({group:g,type:'farmer',legs,phase:Math.random()*6,heading:Math.random()*Math.PI*2,nextTurn:0,speed:.007});
+ }
+ function farmPlot(x,z) {
+   // Қитъаҳои хурди кишт бо ҷӯякҳо ва ниҳолҳои сабз
+   for(let dx=0;dx<6;dx++) for(let dz=0;dz<5;dz++) {
+     add(x+dx,0,z+dz,'dirt');
+     if(dx%2===0 && dz%2===0) {
+       const stem=cube(scene,0x397d32,x+dx,.48,z+dz,.09,.82,.09);
+       const leaf1=cube(scene,0x5ca83e,x+dx-.10,.62,z+dz,.24,.12,.10);
+       const leaf2=cube(scene,0x4b9638,x+dx+.10,.68,z+dz,.24,.12,.10);
+       stem.userData.farmPlant=true; leaf1.userData.farmPlant=true; leaf2.userData.farmPlant=true;
+     }
+   }
+ }
+ function animal(x,z,kind) {
+   const g = new THREE.Group(); g.position.set(x,.5,z); scene.add(g);
+   const body = kind==='sheep'?0xe9e5d8:0x70452b;
+   cube(g,body,0,.62,0,.95,.65,.55);
+   cube(g,kind==='sheep'?0x3b3430:0x4a2b1b,.48,.78,0,.34,.38,.38);
+   cube(g,kind==='sheep'?0x3b3430:0x4a2b1b,.65,.57,.12,.16,.12,.08);
+   const legs=[];
+   for(const [lx,lz] of [[-.3,-.18],[-.3,.18],[.3,-.18],[.3,.18]])
+     legs.push(cube(g,kind==='sheep'?0x51483e:0x4c3020,lx,.22,lz,.13,.42,.13));
+   if(kind==='cow') {
+     cube(g,0xf0eee6,-.18,.75,.282,.24,.2,.025);
+     cube(g,0x49342b,.20,.48,.282,.20,.16,.025);
+     cube(g,0xe7d7b5,.52,1.02,-.16,.10,.25,.10);
+     cube(g,0xe7d7b5,.52,1.02,.16,.10,.25,.10);
+   }
+   if(kind==='goat') {
+     cube(g,0x5b3825,.52,1.03,-.13,.09,.28,.09);
+     cube(g,0x5b3825,.52,1.03,.13,.09,.28,.09);
+   }
+   if(kind==='sheep') {
+     // Пашми и думчаи хурд барои силуэти равшантар
+     cube(g,0xf7f2e8,-.22,.91,0,.48,.30,.56);
+     cube(g,0xf7f2e8,-.52,.70,0,.18,.14,.14);
+   }
+   const tail=cube(g,kind==='sheep'?0xe9e5d8:0x4a2b1b,-.58,.72,0,.12,.34,.12);
+   tail.position.set(-.58,.72,0);
+   creatures.push({group:g,type:kind,legs,tail,phase:Math.random()*6,heading:Math.random()*Math.PI*2,nextTurn:0,speed:kind==='horse'?.018:.012+Math.random()*.012});
+ }
+ // Ҳайвоноти ваҳшии иловагӣ — моделҳои 3D-и блокӣ бо ҳаракати зинда
+ function wildlife(x,z,kind) {
+   const g=new THREE.Group();g.position.set(x,.5,z);scene.add(g);
+   const palette={wolf:{body:0x777b80,head:0x85898d,leg:0x555a60,tail:0x666b70},fox:{body:0xc66b25,head:0xd47b2d,leg:0x3d3028,tail:0xe0a05a},deer:{body:0x9b6a3e,head:0xa8794a,leg:0x59402c,tail:0xe9dfc8},bear:{body:0x493226,head:0x5a3d2a,leg:0x34251d,tail:0x493226}};
+   const c=palette[kind]||palette.wolf;
+   const scale=kind==='bear'?1.25:kind==='deer'?1.05:.88;
+   cube(g,c.body,0,.66,0,.98*scale,.62*scale,.48*scale);
+   cube(g,c.head,.48*scale,1.02*scale,0,.38*scale,.38*scale,.36*scale);
+   cube(g,0x171412,.67*scale,.98*scale,.17*scale,.08,.07,.035);
+   cube(g,0x171412,.67*scale,.98*scale,-.17*scale,.08,.07,.035);
+   const legs=[];
+   for(const [lx,lz] of [[-.30,-.16],[-.30,.16],[.30,-.16],[.30,.16]]) legs.push(cube(g,c.leg,lx*scale,.23*scale,lz*scale,.13*scale,.43*scale,.13*scale));
+   const tail=cube(g,c.tail,-.62*scale,.76*scale,0,kind==='fox'?.48:.25,.13,.14);
+   if(kind==='fox') { cube(g,0xf2e7d4,-.83,.76,.015,.12,.12,.13); }
+   if(kind==='wolf') { cube(g,0x555b61,.66,1.24,-.11,.10,.22,.10);cube(g,0x555b61,.66,1.24,.11,.10,.22,.10); }
+   if(kind==='deer') { cube(g,0x76512f,.58,1.36,-.12,.07,.34,.07);cube(g,0x76512f,.58,1.36,.12,.07,.34,.07);cube(g,0x76512f,.50,1.50,-.22,.22,.06,.06);cube(g,0x76512f,.50,1.50,.22,.22,.06,.06); }
+   if(kind==='bear') { cube(g,0x5a3d2a,.45,1.25,-.17,.16,.16,.12);cube(g,0x5a3d2a,.45,1.25,.17,.16,.16,.12); }
+   creatures.push({group:g,type:kind,legs,tail,phase:Math.random()*6,heading:Math.random()*Math.PI*2,nextTurn:0,speed:kind==='bear'?.008:.014+Math.random()*.006});
+ }
+ function house(x,z) {
+   for(let dx=0;dx<4;dx++)for(let dz=0;dz<4;dz++)add(x+dx,0,z+dz,'wood');
+   for(let y=1;y<=3;y++)for(let dx=0;dx<4;dx++)for(let dz=0;dz<4;dz++)
+     if(dx===0||dx===3||dz===0||dz===3)add(x+dx,y,z+dz,'dirt');
+   for(let dx=-1;dx<=4;dx++)for(let dz=-1;dz<=4;dz++)
+     add(x+dx,4,z+dz,'wood');
+   // даромадгоҳ
+   const door=blocks.get(key(x+1,1,z)); if(door){world.remove(door);blocks.delete(key(x+1,1,z));}
+   const door2=blocks.get(key(x+1,2,z)); if(door2){world.remove(door2);blocks.delete(key(x+1,2,z));}
+ }
+ house(-3,-11); house(3,-11);
+ villager(-1,-8); villager(5,-8);
+ 
+ animal(-5,2,'cow'); animal(-2,4,'sheep'); animal(4,3,'cow'); animal(8,-2,'sheep');
+ // Аспи блокӣ
+ function horse(x,z) {
+   const g=new THREE.Group();g.position.set(x,.5,z);scene.add(g);
+   cube(g,0x754324,0,.95,0,1.15,.78,.52);
+   cube(g,0x754324,.48,1.42,0,.38,.72,.38);
+   cube(g,0x4b2b1a,.60,1.82,0,.45,.42,.40);
+   cube(g,0x17110d,.72,1.88,.205,.07,.07,.025);
+   cube(g,0x17110d,.72,1.88,-.205,.07,.07,.025);
+   for(const [lx,lz] of [[-.38,-.17],[-.38,.17],[.38,-.17],[.38,.17]])
+     cube(g,0x3d2418,lx,.38,lz,.16,.72,.16);
+   cube(g,0x3d2418,-.68,1.05,0,.48,.12,.13);
+   cube(g,0x30231b,-.05,1.38,0,.72,.12,.58); // зин
+   cube(g,0x9b7542,-.05,1.47,0,.55,.08,.44); // болои зин
+   const legs=[];
+   for(const [lx,lz] of [[-.38,-.17],[-.38,.17],[.38,-.17],[.38,.17]])
+     legs.push(g.children.find(o=>Math.abs(o.position.x-lx)<.001 && Math.abs(o.position.z-lz)<.001));
+   const horseData={group:g,type:'horse',legs,phase:Math.random()*6,heading:Math.random()*Math.PI*2,nextTurn:0,speed:.018};
+   creatures.push(horseData);
+ }
+
+
+ horse(7,7);
+ // Аждаҳои блокӣ дар осмон
+ const dragon=new THREE.Group();scene.add(dragon);
+ cube(dragon,0x3c8d50,0,0,0,2.1,.85,.8);
+ cube(dragon,0x367a45,1.05,.28,0,.72,.7,.72);
+ cube(dragon,0x243b2c,1.35,.48,.22,.10,.10,.06);
+ cube(dragon,0x243b2c,1.35,.48,-.22,.10,.10,.06);
+ cube(dragon,0x367a45,-1.25,.12,0,.85,.32,.34);
+ cube(dragon,0x367a45,-1.75,.12,0,.65,.18,.22);
+ const wingL=cube(dragon,0x286b3d,-.15,.58,.72,1.25,.12,1.45);
+ const wingR=cube(dragon,0x286b3d,-.15,.58,-.72,1.25,.12,1.45);
+ dragon.position.set(0,8,-9);
+
+ // Хонаи калонтари деҳа
+ function bigHouse(x,z) {
+   for(let dx=0;dx<7;dx++)for(let dz=0;dz<6;dz++)add(x+dx,0,z+dz,'wood');
+   for(let y=1;y<=3;y++)for(let dx=0;dx<7;dx++)for(let dz=0;dz<6;dz++)
+     if(dx===0||dx===6||dz===0||dz===5)add(x+dx,y,z+dz,'dirt');
+   for(let dx=-1;dx<=7;dx++)for(let dz=-1;dz<=6;dz++)
+     if(dx===-1||dx===7||dz===-1||dz===6)add(x+dx,4,z+dz,'wood');
+ }
+ bigHouse(-10,-12);
+ // Деҳаи васеъ бо хонаҳо ва сокинони нав
+ house(-15,-12); house(-20,-12); house(-15,-5); house(-20,-5);
+ villager(-14,-9); villager(-19,-9); villager(-14,-2); villager(-19,-2);
+ farmer(-9,-8); farmPlot(-7,-12);
+ // Роҳи деҳа
+ for(let z=-13;z<=1;z++)for(const x of [-13,-12]){
+   const k=key(x,0,z),old=blocks.get(k);if(old){world.remove(old);blocks.delete(k);}
+   add(x,0,z,'dirt');
+ }
+ animal(-17,-1,'cow'); animal(-22,-2,'sheep'); animal(-12,-4,'cow');
+ wildlife(17,-7,'deer'); wildlife(21,-3,'fox'); wildlife(-25,-7,'wolf'); wildlife(24,9,'bear');
+ animal(-24,5,'goat'); animal(-18,7,'goat'); animal(-9,5,'sheep'); animal(13,6,'cow');
+ // Зомбиҳои блокӣ — душманони хаёлӣ дар бозӣ
+ const zombies=[]; const zombieHP=new Map();
+ function zombie(x,z){
+   const g=new THREE.Group();g.position.set(x,.5,z);scene.add(g);
+   cube(g,0x4d9b55,0,1.55,0,.55,.62,.42);
+   cube(g,0x397a45,0,1.05,0,.62,.55,.34);
+   cube(g,0x397a45,-.42,1.08,0,.18,.62,.18);
+   cube(g,0x397a45,.42,1.08,0,.18,.62,.18);
+   cube(g,0x314d35,-.16,.38,0,.2,.62,.2);
+   cube(g,0x314d35,.16,.38,0,.2,.62,.2);
+   cube(g,0xffffff,-.13,1.62,.22,.09,.09,.025);
+   cube(g,0xffffff,.13,1.62,.22,.09,.09,.025);
+   zombies.push(g); zombieHP.set(g,3);
+ }
+ zombie(-9,6); zombie(10,-9);
+
+ // ҶАҲОНИ 164M: 12,800 × 12,800 = 163,840,000 сутуни сатҳӣ (тақрибан 164 млн).
+ // Ин андозаи харита аст, на шумораи ҳамаи блокҳои амудӣ. Chunk-ҳои наздик динамикӣ бор мешаванд.
+ const WORLD_MIN=-6400, WORLD_MAX=6399, WORLD_LIMIT=6400, CHUNK_SIZE=16, CHUNK_RADIUS=2;
+ const loadedChunks=new Map();
+ const chunkMaterials={grass:mats.grass,dirt:mats.dirt,stone:mats.stone};
+ function terrainHeight(wx,wz){
+   // Релефи равшани кӯҳӣ: теппаҳои наздик, қаторкӯҳҳои тез ва қуллаҳои барфпӯш.
+   const broad=Math.sin(wx*.0105)*2.8+Math.cos(wz*.009)*2.6;
+   const ridges=Math.sin((wx+wz)*.042)*3.4+Math.cos((wx-wz)*.034)*2.8;
+   const hills=Math.sin(wx*.105)*1.15+Math.cos(wz*.092)*1.05;
+   const ridgeWave=Math.abs(Math.sin((wx*.026+wz*.019)+Math.sin(wz*.013)*1.7));
+   const sharpRidges=(1-ridgeWave)*7.5;
+   const peakField=Math.max(0,Math.sin(wx*.018+Math.cos(wz*.014)*1.8)*Math.cos(wz*.016-wx*.006));
+   const peaks=Math.pow(peakField,2.2)*13;
+   const raw=Math.max(2,Math.min(30,Math.floor(5+broad+ ridges+hills+sharpRidges+peaks)));
+   // Ҷазираи оғоз тадриҷан ба доманаи кӯҳҳо мепайвандад, аммо баъд аз соҳил релеф пурра намоён аст.
+   const shoreBlend=Math.max(0,Math.min(1,(Math.hypot(wx,wz)-24)/17));
+   return Math.round(raw*shoreBlend);
+ }
+ function lakeAt(wx,wz){
+   return (Math.hypot(wx-180,wz+90)<25) ||
+          (Math.hypot(wx+310,wz-240)<34) ||
+          (Math.hypot(wx-520,wz-410)<20);
+ }
+ function riverAt(wx,wz){
+   const riverX= Math.sin(wz*.009)*34 + Math.sin(wz*.002)*70 + 390;
+   return Math.abs(wx-riverX)<3.2;
+ }
+ function hash2(x,z){
+   let n=(x*374761393+z*668265263)|0;
+   n=(n^(n>>>13))*1274126177;
+   return ((n^(n>>>16))>>>0)/4294967295;
+ }
+ function makeChunk(cx,cz){
+   const id=cx+','+cz;if(loadedChunks.has(id))return;
+   const positions={grass:[],dirt:[],stone:[],snow:[],sand:[],water:[],wood:[],leaves:[]};
+   function put(type,x,y,z){positions[type].push([x,y,z]);}
+   for(let lx=0;lx<CHUNK_SIZE;lx++)for(let lz=0;lz<CHUNK_SIZE;lz++){
+     const wx=cx*CHUNK_SIZE+lx,wz=cz*CHUNK_SIZE+lz;
+     if(wx<WORLD_MIN||wx>WORLD_MAX||wz<WORLD_MIN||wz>WORLD_MAX)continue;
+     // Ҷазираи оғоз то радиуси 28 аст; берун аз он замин аз соҳил пайваста сохта мешавад.
+     if(Math.hypot(wx,wz)<28)continue;
+     let h=terrainHeight(wx,wz);
+     const wet=lakeAt(wx,wz)||riverAt(wx,wz);
+     if(wet)h=Math.min(h,2);
+     put(wet?'sand':(h>=13?'snow':'grass'),wx,h,wz);
+     // Замини кӯҳӣ пурра ва ғафс аст: камера аз зери сатҳ ба осмон/поёни харита намегузарад.
+     // Қабатҳои аввал хок, қабатҳои амиқ санг мешаванд.
+     for(let depth=1;depth<=10;depth++) put(depth<=2?'dirt':'stone',wx,h-depth,wz);
+     if(wet)put('water',wx,2,wz);
+     // Дарахтони блокӣ дар ҷангалҳои табиӣ, на дар об ё қулла.
+     const treeChance=hash2(wx,wz);
+     if(!wet && h>2 && h<11 && treeChance>.986 && Math.hypot(wx,wz)>90){
+       const trunk=3+Math.floor(hash2(wx+17,wz-9)*2);
+       for(let ty=1;ty<=trunk;ty++)put('wood',wx,h+ty,wz);
+       for(let dx=-2;dx<=2;dx++)for(let dz=-2;dz<=2;dz++){
+         for(let dy=trunk-1;dy<=trunk+1;dy++){
+           if(Math.abs(dx)+Math.abs(dz)+Math.abs(dy-trunk)<=4)
+             put('leaves',wx+dx,h+dy,wz+dz);
+         }
+       }
+     }
+   }
+   // Деҳаҳои хурди тоҷикӣ: хонаҳо дар баъзе chunk-ҳои дур аз соҳил.
+   const villageSeed=hash2(cx,cz);
+   if(villageSeed>.965 && Math.hypot(cx*CHUNK_SIZE,cz*CHUNK_SIZE)>110){
+     const bx=cx*CHUNK_SIZE+5,bz=cz*CHUNK_SIZE+5;
+     const floor=terrainHeight(bx,bz);
+     for(let dx=0;dx<6;dx++)for(let dz=0;dz<6;dz++)put('wood',bx+dx,floor+1,bz+dz);
+     for(let y=2;y<=4;y++)for(let dx=0;dx<6;dx++)for(let dz=0;dz<6;dz++){
+       if(dx===0||dx===5||dz===0||dz===5)put('dirt',bx+dx,floor+y,bz+dz);
+     }
+     for(let dx=-1;dx<=6;dx++)for(let dz=-1;dz<=6;dz++)
+       if(dx===-1||dx===6||dz===-1||dz===6)put('wood',bx+dx,floor+5,bz+dz);
+   }
+   const group=new THREE.Group();
+   const dummy=new THREE.Object3D();
+   for(const type of Object.keys(positions)){
+     const arr=positions[type];if(!arr.length)continue;
+     const material=type==='water'?mats.water:(type==='sand'?sandMat:(type==='wood'?mats.wood:(type==='leaves'?mats.leaves:(type==='snow'?mats.snow:chunkMaterials[type]))));
+     const mesh=new THREE.InstancedMesh(geo,material,arr.length);
+     mesh.userData.chunk=id;
+     arr.forEach((v,i)=>{dummy.position.set(v[0],v[1],v[2]);dummy.updateMatrix();mesh.setMatrixAt(i,dummy.matrix)});
+     mesh.instanceMatrix.needsUpdate=true;mesh.computeBoundingSphere();mesh.frustumCulled=true;
+     mesh.castShadow=type!=='water';mesh.receiveShadow=true;group.add(mesh);
+   }
+   scene.add(group);loadedChunks.set(id,group);
+ }
+ function updateChunks(){
+   const pcx=Math.floor(camera.position.x/CHUNK_SIZE),pcz=Math.floor(camera.position.z/CHUNK_SIZE);
+   const wanted=new Set();
+   for(let dx=-CHUNK_RADIUS;dx<=CHUNK_RADIUS;dx++)for(let dz=-CHUNK_RADIUS;dz<=CHUNK_RADIUS;dz++){
+     const cx=pcx+dx,cz=pcz+dz;
+     if(cx*CHUNK_SIZE>WORLD_MAX||cx*CHUNK_SIZE+CHUNK_SIZE-1<WORLD_MIN||cz*CHUNK_SIZE>WORLD_MAX||cz*CHUNK_SIZE+CHUNK_SIZE-1<WORLD_MIN)continue;
+     const id=cx+','+cz;wanted.add(id);makeChunk(cx,cz);
+   }
+   for(const [id,group] of loadedChunks){if(!wanted.has(id)){scene.remove(group);group.traverse(o=>{if(o.isInstancedMesh)o.dispose?.()});loadedChunks.delete(id)}}
+   const label=document.getElementById('worldInfo');if(label)label.textContent='🌍 164M · 12,800×12,800 · '+loadedChunks.size+' CHUNKS';
+ }
+ updateChunks();
+
+ const ray=new THREE.Raycaster();let yaw=0,pitch=0,keys={},selected='grass';
+ // Таҷҳизоти намоён дар дасти бозигар
+ const swordView=new THREE.Group();
+ const swordMat=new THREE.MeshLambertMaterial({color:0x65e8f4});
+ const handleMat=new THREE.MeshLambertMaterial({color:0x68442b});
+ const blade=new THREE.Mesh(new THREE.BoxGeometry(.075,.58,.055),swordMat);
+ blade.position.y=.25;swordView.add(blade);
+ const guard=new THREE.Mesh(new THREE.BoxGeometry(.28,.065,.09),handleMat);
+ guard.position.y=-.06;swordView.add(guard);
+ const grip=new THREE.Mesh(new THREE.BoxGeometry(.08,.22,.08),handleMat);
+ grip.position.y=-.19;swordView.add(grip);
+ swordView.position.set(.48,-.42,-.82);swordView.rotation.z=-.22;camera.add(swordView);
+ const bowView=new THREE.Group();
+ const bowMat=new THREE.MeshLambertMaterial({color:0x8c542a});
+ const bowArc=new THREE.Mesh(new THREE.TorusGeometry(.25,.045,6,12,Math.PI),bowMat);
+ bowArc.rotation.z=Math.PI/2;bowView.add(bowArc);
+ const bowString=new THREE.Mesh(new THREE.BoxGeometry(.025,.48,.025),new THREE.MeshLambertMaterial({color:0xe8dfc8}));
+ bowView.add(bowString);bowView.position.set(.48,-.38,-.78);camera.add(bowView);bowView.visible=false;
+ const pickView=new THREE.Group();
+ const pickHandle=new THREE.Mesh(new THREE.BoxGeometry(.07,.48,.07),handleMat);pickView.add(pickHandle);
+ const pickHead=new THREE.Mesh(new THREE.BoxGeometry(.42,.08,.09),new THREE.MeshLambertMaterial({color:0x54d6dc}));pickHead.position.y=.22;pickView.add(pickHead);
+ pickView.position.set(.48,-.42,-.8);camera.add(pickView);pickView.visible=false;
+ const shieldView=new THREE.Group();
+ const shieldFace=new THREE.Mesh(new THREE.BoxGeometry(.38,.48,.08),
+   new THREE.MeshLambertMaterial({color:0x3979ad}));
+ shieldView.add(shieldFace);
+ const shieldTrim=new THREE.Mesh(new THREE.BoxGeometry(.42,.52,.045),
+   new THREE.MeshLambertMaterial({color:0xc7d8df}));
+ shieldTrim.position.z=-.045;shieldView.add(shieldTrim);
+ shieldView.position.set(-.48,-.35,-.8);camera.add(shieldView);
+ swordView.visible=false;shieldView.visible=false;
+ let armorOn=false;
+ const armorStatus=document.createElement('div');
+ armorStatus.className='pill';armorStatus.style.cssText='position:fixed;top:48px;right:8px;z-index:2';
+ armorStatus.textContent='💎 Зиреҳ: хомӯш';document.body.appendChild(armorStatus);
+ let night=false,rain=false,snowing=false,weatherParts=null,weatherMode=0;
+ const weatherButton=document.getElementById('weather');
+ function makeWeather(){
+   if(weatherParts)return;
+   const count=650,arr=new Float32Array(count*3);
+   for(let i=0;i<count;i++){
+     arr[i*3]=(Math.random()-.5)*38;
+     arr[i*3+1]=Math.random()*20;
+     arr[i*3+2]=(Math.random()-.5)*38;
+   }
+   const geom=new THREE.BufferGeometry();
+   geom.setAttribute('position',new THREE.BufferAttribute(arr,3));
+   weatherParts=new THREE.Points(geom,new THREE.PointsMaterial({
+     color:0xeaf6ff,size:.11,transparent:true,opacity:.9
+   }));
+   scene.add(weatherParts);
+ }
+ weatherButton.onclick=()=>{
+   weatherMode=(weatherMode+1)%3; // 0 = clear, 1 = rain, 2 = snow
+   if(weatherMode===1)sfx('rain');
+   rain=weatherMode===1;snowing=weatherMode===2;
+   if(weatherMode===0){
+     if(weatherParts)weatherParts.visible=false;
+     weatherButton.textContent='🌦️';
+     document.getElementById('notice').textContent='☀️ Ҳаво соф шуд';
+   }else{
+     makeWeather();
+     weatherParts.visible=true;
+     weatherParts.material.color.set(rain?0x9fc9e8:0xffffff);
+     weatherParts.material.size=rain?.075:.14;
+     document.getElementById('notice').textContent=rain?'🌧️ Борон фаъол шуд':'❄️ Барф фаъол шуд';
+     weatherButton.textContent=rain?'🌧️':'❄️';
+   }
+ };
+
+ function hit(){ray.setFromCamera(new THREE.Vector2(0,0),camera);return ray.intersectObjects(world.children,false)[0]}
+ function mine(){
+   sfx('block');
+   if(selected==='bow'){
+     const arrow=new THREE.Mesh(new THREE.BoxGeometry(.06,.06,.7),new THREE.MeshLambertMaterial({color:0xd7d0bd}));
+     arrow.position.copy(camera.position);
+     const dir=new THREE.Vector3(0,0,-1).applyAxisAngle(new THREE.Vector3(0,1,0),yaw);
+     arrow.rotation.y=yaw;scene.add(arrow);
+     let steps=0;const fly=()=>{if(!arrow.parent)return;arrow.position.addScaledVector(dir,.48);steps++;if(steps>35){scene.remove(arrow);return;}requestAnimationFrame(fly);};fly();
+     document.getElementById('notice').textContent='🏹 Тир парронда шуд';return;
+   }
+   if(selected==='sword'){
+     let target=null,best=3.2;
+     for(const z of zombies){
+       const dx=z.position.x-camera.position.x,dz=z.position.z-camera.position.z;
+       const dist=Math.hypot(dx,dz);
+       const toward=new THREE.Vector3(dx,0,dz).normalize();
+       const facing=new THREE.Vector3(0,0,-1).applyAxisAngle(new THREE.Vector3(0,1,0),yaw);
+       if(dist<best && toward.dot(facing)>.35){best=dist;target=z;}
+     }
+     if(target){const hp=(zombieHP.get(target)||1)-1;zombieHP.set(target,hp);
+       if(hp<=0){scene.remove(target);zombies.splice(zombies.indexOf(target),1);zombieHP.delete(target);
+         document.getElementById('notice').textContent='⚔️ Зомбиро мағлуб кардӣ!';}
+       else document.getElementById('notice').textContent='⚔️ Зарба! Боз ҳам пахш кун';
+     } else document.getElementById('notice').textContent='Зомби наздик нест';
+     return;
+   }
+   let h=hit();if(h&&h.distance<6){
+     const type=h.object.userData.type;
+     if(type==='diamond'&&selected!=='pickaxe'){document.getElementById('notice').textContent='💎 Барои алмос кайкӯбро интихоб кун';return;}
+     world.remove(h.object);blocks.delete(key(h.object.userData.x,h.object.userData.y,h.object.userData.z));
+     if(type==='diamond')document.getElementById('notice').textContent='💎 Кони алмос ёфт шуд!';
+   }
+ }
+ function place(){let h=hit();if(!h||h.distance>6)return;let p=h.object.position.clone().add(h.face.normal);add(Math.round(p.x),Math.round(p.y),Math.round(p.z),selected);sfx('block')}
+ document.getElementById('mine').onclick=mine;document.getElementById('place').onclick=place;
+ document.getElementById('eat').onclick=()=>{
+   if(gameMode!=='survival'){document.getElementById('notice').textContent='Хӯрок дар Survival истифода мешавад';return;}
+   if(selected!=='apple'&&selected!=='bread'){document.getElementById('notice').textContent='Аввал 🍎 ё 🍞 интихоб кун';return;}
+   hunger=Math.min(100,hunger+(selected==='bread'?35:25));
+   health=Math.min(100,health+5);
+   document.getElementById('notice').textContent='😋 Хӯрок хӯрда шуд';sfx('eat');
+ };
+ document.getElementById('save').onclick=()=>{
+   try{
+     const data=[...blocks.values()].map(m=>[m.userData.x,m.userData.y,m.userData.z,m.userData.type]);
+     localStorage.setItem('tj_minecraft_world',JSON.stringify(data));
+     document.getElementById('notice').textContent='💾 Ҷаҳон дар ҳамин телефон сабт шуд';
+   }catch(e){document.getElementById('notice').textContent='Сабт дастрас нест';}
+ };
+ try{
+   const saved=JSON.parse(localStorage.getItem('tj_minecraft_world')||'null');
+   if(Array.isArray(saved)){
+     for(const m of [...blocks.values()])world.remove(m);blocks.clear();
+     saved.forEach(v=>add(v[0],v[1],v[2],v[3]));
+     document.getElementById('notice').textContent='Ҷаҳони сабтшуда бор карда шуд';
+   }
+ }catch(e){}
+ document.querySelectorAll('.slot').forEach(b=>b.onclick=()=>{
+   document.querySelectorAll('.slot').forEach(q=>q.classList.remove('sel'));b.classList.add('sel');
+   selected=b.dataset.block;
+   swordView.visible=selected==='sword';
+   shieldView.visible=selected==='shield';
+   bowView.visible=selected==='bow';
+   pickView.visible=selected==='pickaxe';
+   if(selected==='armor'){
+     armorOn=!armorOn;
+     armorStatus.textContent=armorOn?'💎 Зиреҳ: фаъол':'💎 Зиреҳ: хомӯш';
+     document.getElementById('notice').textContent=armorOn?'Зиреҳи алмосӣ пӯшида шуд (намоишӣ)':'Зиреҳ хомӯш шуд';
+   } else if(selected==='apple'||selected==='bread') {
+     document.getElementById('notice').textContent='Барои хӯрдан тугмаи 🍎-ро пахш кун';
+   } else if(selected==='bow') {
+     document.getElementById('notice').textContent='🏹 Камон интихоб шуд — тугмаи ⛏️ тир мепаронад';
+   } else if(selected==='pickaxe') {
+     document.getElementById('notice').textContent='⛏️ Кайкӯби алмосӣ интихоб шуд';
+   } else if(selected==='sword') {
+     document.getElementById('notice').textContent='🗡️ Шамшери алмосӣ дар даст аст';
+   } else if(selected==='shield') {
+     document.getElementById('notice').textContent='🛡️ Сипар дар даст аст';
+   } else {
+     document.getElementById('notice').textContent='Блок интихоб шуд';
+   }
+ });
+ function bind(id,k){let b=document.getElementById(id);b.addEventListener('pointerdown',e=>{e.preventDefault();keys[k]=true;b.setPointerCapture(e.pointerId)});['pointerup','pointercancel','lostpointercapture'].forEach(ev=>b.addEventListener(ev,()=>keys[k]=false))}
+ bind('left','left');bind('right','right');bind('forward','forward');bind('backward','backward');bind('jump','jump');
+ let mountedHorse=null;
+ document.getElementById('mount').addEventListener('click',()=>{
+   if(mountedHorse){mountedHorse=null;document.getElementById('mount').textContent='🐎';document.getElementById('notice').textContent='Аз асп фаромадӣ';return;}
+   const h=creatures.find(c=>c.type==='horse' && Math.hypot(c.group.position.x-camera.position.x,c.group.position.z-camera.position.z)<3.8);
+   if(h){mountedHorse=h;sfx('horse');document.getElementById('mount').textContent='⬇';document.getElementById('notice').textContent='Ба асп савор шудӣ! Бо тугмаҳои ҳаракат аспро идора кун.';}
+   else document.getElementById('notice').textContent='Ба асп наздик шав, баъд 🐎-ро пахш кун.';
+ });
+ const look=document.getElementById('look');let last=null;look.addEventListener('pointerdown',e=>{last={x:e.clientX,y:e.clientY};look.setPointerCapture(e.pointerId)});look.addEventListener('pointermove',e=>{if(!last)return;let dx=e.clientX-last.x,dy=e.clientY-last.y;yaw-=dx*.005;pitch=Math.max(-0.72,Math.min(0.72,pitch-dy*(.0001*gameSettings.sensitivity)));last={x:e.clientX,y:e.clientY}});['pointerup','pointercancel','lostpointercapture'].forEach(ev=>look.addEventListener(ev,()=>last=null));
+ let tick=0,health=100,hunger=100,lastHunger=0,lastDamage=0;
+ let fpsFrames=0,fpsStart=performance.now(),fpsNow=60,adaptiveCheck=performance.now();
+ function loop(){requestAnimationFrame(loop);tick+=0.025;updateChunks();if(foliageGroup)foliageGroup.rotation.z=Math.sin(tick*.65)*.00035;
+   // Баргҳои болои шохаҳо бо шамол каме меҷунбанд; баргҳои ҷудогона оҳиста меафтанд.
+   fallingLeaves.forEach((leaf,i)=>{
+     const u=leaf.userData;
+     leaf.position.y-=.006+(.003*Math.sin(tick*1.8+u.phase));
+     leaf.position.x+=Math.sin(tick*1.4+u.phase)*.006;
+     leaf.position.z+=Math.cos(tick*1.1+u.phase)*.004;
+     leaf.rotation.x+=.012;leaf.rotation.z+=.018;
+     if(leaf.position.y<.12){const home=treeLocations.find(t=>t[0]===u.homeX&&t[1]===u.homeZ);leaf.position.set(u.homeX+(Math.random()-.5)*2.8,(home?.[3]||0)+3.2+Math.random()*1.6,u.homeZ+(Math.random()-.5)*2.8);}
+   });
+   // Шамоли сабук: хӯшаҳои алаф тадриҷан меҷунбанд; навсозӣ ҳар чор кадр барои Android.
+   if(Math.floor(tick*40)%4===0){const wind=Math.sin(tick*1.7)*.12+Math.sin(tick*.63)*.05;const swayDummy=new THREE.Object3D();for(const b of grassMotion){swayDummy.position.set(b.x,.52,b.z);swayDummy.rotation.set(0,0,b.base+wind*Math.sin(b.phase+tick*1.3));swayDummy.scale.set(b.scale,b.scale,b.scale);swayDummy.updateMatrix();b.mesh.setMatrixAt(b.index,swayDummy.matrix);}grassBlades.instanceMatrix.needsUpdate=true;grassBlades2.instanceMatrix.needsUpdate=true;}
+   const waterPos=oceanGeo.attributes.position;for(let i=0;i<waterPos.count;i++){const x=waterPos.getX(i),y=waterPos.getY(i);waterPos.setZ(i,Math.sin(x*.22+tick*2)*.11+Math.cos(y*.19+tick*1.5)*.08);}waterPos.needsUpdate=true;oceanGeo.computeVertexNormals();
+   clouds.forEach((c,i)=>{c.position.x+=.003+(i%2)*.001;if(c.position.x>38)c.position.x=-38;});
+   dragon.position.x=Math.sin(tick*.22)*7;
+   dragon.position.z=-9+Math.cos(tick*.22)*4;
+   dragon.position.y=8+Math.sin(tick*.8)*.55;
+   dragon.rotation.y=Math.cos(tick*.22)*.35;
+   if(gameMode==='survival'){
+     if(tick-lastHunger>900){hunger=Math.max(0,hunger-2);lastHunger=tick;}
+     if(hunger===0 && tick-lastDamage>100){health=Math.max(0,health-1);lastDamage=tick;}
+     for(const z of zombies){
+       const dx=camera.position.x-z.position.x,dz=camera.position.z-z.position.z;
+       const dist=Math.hypot(dx,dz);
+       if(dist<10 && dist>1.5){z.position.x+=dx/dist*.008;z.position.z+=dz/dist*.008;}
+       if(dist<1.7 && tick-lastDamage>25){health=Math.max(0,health-5);lastDamage=tick;}
+     }
+     document.getElementById('survivalStats').textContent='❤️ '+health+' · 🍗 '+hunger;
+     if(health<=0){document.getElementById('notice').textContent='Бозӣ анҷом ёфт — ☰-ро пахш карда аз нав оғоз кун';}
+   }
+   if(Math.floor(tick/180)%2===1 && !night){night=true;scene.background.setHex(0x17243e);scene.fog.color.setHex(0x17243e);sun.intensity=.35;}
+   if(Math.floor(tick/180)%2===0 && night){night=false;scene.background.setHex(0x83c9f4);scene.fog.color.setHex(0x83c9f4);sun.intensity=2;}
+   if((rain||snowing)&&weatherParts&&weatherParts.visible){
+     const a=weatherParts.geometry.attributes.position;
+     for(let i=0;i<a.count;i++){
+       let y=a.getY(i)-(rain?.24:.075);
+       if(y<0){y=18;a.setX(i,(Math.random()-.5)*38);a.setZ(i,(Math.random()-.5)*38);}
+       a.setY(i,y);
+       if(snowing)a.setX(i,a.getX(i)+Math.sin((i+performance.now()*.001)*.7)*.002);
+     }
+     a.needsUpdate=true;
+   }
+   // Овозҳои ҳайвоноти наздик: тақрибан ҳар 7–13 сония, бо баландии вобаста ба масофа.
+   if(soundOn && !document.hidden && tick-lastAnimalSoundAt>280+Math.random()*240){
+     let nearest=null,nearestDist=18;
+     for(const c of creatures){const d=Math.hypot(c.group.position.x-camera.position.x,c.group.position.z-camera.position.z);if(d<nearestDist && animalAudio[c.type]){nearest=c;nearestDist=d;}}
+     if(nearest && Math.random()<.72){playAnimalSound(nearest.type,nearestDist);lastAnimalSoundAt=tick;}
+   }
+   creatures.forEach((c,i)=>{
+     if(c!==mountedHorse){
+       if(tick>c.nextTurn){c.heading+=(Math.random()-.5)*1.5;c.nextTurn=tick+35+Math.random()*100;}
+       const nx=c.group.position.x+Math.sin(c.heading)*c.speed;
+       const nz=c.group.position.z+Math.cos(c.heading)*c.speed;
+       const bx=Math.round(nx),bz=Math.round(nz);
+       const hasGround=blocks.has(key(bx,0,bz));
+       const blocked=blocks.has(key(bx,1,bz))||blocks.has(key(bx,2,bz));
+       if(Math.hypot(nx,nz)<27 && hasGround && !blocked){
+         c.group.position.x=nx;c.group.position.z=nz;
+       } else c.heading+=Math.PI*(.65+Math.random()*.7);
+       c.group.rotation.y=c.heading;
+     }
+     c.group.position.y=((c.type==='villager'||c.type==='farmer')?.395:.5)+Math.sin(tick*2+c.phase)*.008;
+     const moving=Math.abs(c.speed)>0 && tick<c.nextTurn+8;
+     if(c.legs)c.legs.forEach((leg,j)=>{if(leg)leg.rotation.x=Math.sin(tick*5+c.phase+(j%2)*Math.PI)*.28;});
+     if(c.tail)c.tail.rotation.z=Math.sin(tick*2.7+c.phase)*.32;
+     if(c.type==='sheep'||c.type==='cow'||c.type==='goat'){
+       const head=c.group.children[1];
+       if(head)head.rotation.z=Math.sin(tick*1.8+c.phase)*.045;
+     }
+   });
+   if(mountedHorse){
+     let rideDir=0;if(keys.forward)rideDir=1;if(keys.backward)rideDir=-.5;
+     if(keys.left)mountedHorse.group.rotation.y+=.035;
+     if(keys.right)mountedHorse.group.rotation.y-=.035;
+     if(rideDir){
+       const a=mountedHorse.group.rotation.y;
+       mountedHorse.group.position.x=THREE.MathUtils.clamp(mountedHorse.group.position.x+Math.sin(a)*mountedHorse.speed*rideDir*3.2 ,WORLD_MIN,WORLD_MAX);
+       mountedHorse.group.position.z=THREE.MathUtils.clamp(mountedHorse.group.position.z+Math.cos(a)*mountedHorse.speed*rideDir*3.2 ,WORLD_MIN,WORLD_MAX);
+     }
+     mountedHorse.group.position.y=terrainHeight(Math.round(mountedHorse.group.position.x),Math.round(mountedHorse.group.position.z))+.5;
+     const a=mountedHorse.group.rotation.y;
+     // Камера паси асп мемонад ва ба самти ҳаракати асп менигарад
+     camera.position.x=mountedHorse.group.position.x-Math.sin(a)*3.6;
+     camera.position.z=mountedHorse.group.position.z-Math.cos(a)*3.6;
+     camera.position.y=terrainHeight(Math.round(mountedHorse.group.position.x),Math.round(mountedHorse.group.position.z))+3.0;
+     yaw=a+Math.PI;
+     pitch=-0.08;
+   }let d=new THREE.Vector3();if(keys.forward)d.z-=1;if(keys.backward)d.z+=1;if(keys.left)d.x-=1;if(keys.right)d.x+=1;d.normalize().applyAxisAngle(new THREE.Vector3(0,1,0),yaw);// Ҳаракатро дар дохили харита нигоҳ дор ва аз деворҳо гузарониданро манъ кун
+   const step=d.clone().multiplyScalar(mountedHorse?0:.11);
+   const tryX=camera.position.x+step.x,tryZ=camera.position.z+step.z;
+   function blockedAt(x,z){
+     const bx=Math.round(x),bz=Math.round(z);
+     // Коллизияи амудӣ: аз тана ва қисми поёнии тоҷи дарахт гузаштан манъ аст.
+     for(let y=1;y<=5;y++) if(blocks.has(key(bx,y,bz))) return true;
+     return false;
+   }
+   if(tryX>=WORLD_MIN && tryX<=WORLD_MAX && !blockedAt(tryX,camera.position.z))camera.position.x=tryX;
+   if(tryZ>=WORLD_MIN && tryZ<=WORLD_MAX && !blockedAt(camera.position.x,tryZ))camera.position.z=tryZ;
+   camera.position.y=mountedHorse?camera.position.y:(Math.hypot(camera.position.x,camera.position.z)>=28?terrainHeight(Math.round(camera.position.x),Math.round(camera.position.z))+(keys.jump?2.9:2.2): (keys.jump?2.9:2.2));
+   // Камераро ҳамеша болои сатҳи воқеии замин нигоҳ дор; ба зери харита фурӯ рафтан манъ аст.
+   const safeGround=terrainHeight(Math.round(camera.position.x),Math.round(camera.position.z));
+   const minCameraY=safeGround+1.85;
+   if(camera.position.y<minCameraY) camera.position.y=minCameraY;
+   pitch=THREE.MathUtils.clamp(pitch,-0.68,0.68);
+   camera.rotation.order='YXZ';camera.rotation.y=yaw;camera.rotation.x=pitch;
+   renderer.render(scene,camera);fpsFrames++;const now=performance.now();if(now-fpsStart>=1000){fpsNow=Math.round(fpsFrames*1000/(now-fpsStart));const meter=document.getElementById('fpsMeter');if(meter)meter.textContent='FPS: '+fpsNow;fpsFrames=0;fpsStart=now;}
+   if(now-adaptiveCheck>1800){adaptiveCheck=now;let next=adaptivePixelRatio;if(fpsNow<32)next=Math.max(.7,adaptivePixelRatio-.15);else if(fpsNow>52)next=Math.min(targetPixelRatio,adaptivePixelRatio+.08);if(Math.abs(next-adaptivePixelRatio)>.02){adaptivePixelRatio=next;renderer.setPixelRatio(adaptivePixelRatio);renderer.setSize(innerWidth,innerHeight);}}}
+ loop();addEventListener('resize',()=>{camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();renderer.setSize(innerWidth,innerHeight)});
+}
+</script></body></html>
